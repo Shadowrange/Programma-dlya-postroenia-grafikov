@@ -1,0 +1,35 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import sympy as sym
+
+# Ввод уравнения с клавиатуры
+eqn_str = input("Введите уравнение: ")
+
+# Создание символьной переменной x
+x = sym.Symbol('x')
+
+# Преобразование строки в символьное выражение
+eqn = sym.sympify(eqn_str)
+
+# Создание функции на основе символьного выражения
+f = sym.lambdify(x, eqn, 'numpy')
+
+# Создание массива x значений от -10 до 10
+x_vals = np.linspace(-10, 10, 1000)
+
+# Вычисление значений функции для каждого x значения
+y_vals = f(x_vals)
+
+# Построение графика функции
+plt.plot(x_vals, y_vals)
+
+# Добавление сетки
+plt.grid(True)
+
+# Добавление заголовка и меток осей
+plt.title('График уравнения ' + eqn_str)
+plt.xlabel('x')
+plt.ylabel('y')
+
+# Отображение графика
+plt.show()
