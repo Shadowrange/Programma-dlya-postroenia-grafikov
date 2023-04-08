@@ -23,4 +23,6 @@ Python 3.x
 
 График уравнения x**2 + 2*x - 3
 
+![image](https://user-images.githubusercontent.com/130166971/230729979-a6df3563-c42e-441d-9044-1166ec95495c.png)
+
 Авторы программы: Shadowrange
